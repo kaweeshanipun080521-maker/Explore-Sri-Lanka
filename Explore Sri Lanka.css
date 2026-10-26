@@ -1,0 +1,146 @@
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.7;
+  color: #2b2b2b;
+  background: #f6f3ec;
+  background: linear-gradient(to top, rgba(187, 226, 190, 0.5));
+}
+
+/* ---------- Hero title with image ---------- */
+h1 {
+  margin: 0;
+  padding: 140px 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.6);
+  background:
+    linear-gradient(rgba(0, 60, 60, 0.98), rgba(0, 0, 0, 0.55)),
+    url("srilanka.jpg") center / cover no-repeat;
+}
+
+/* ---------- Content width ---------- */
+p, h3, dl, body > b, body > a {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+p {
+  margin-top: 35px;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #444;
+  font-size: 20px;
+}
+
+/* ---------- Section heading ---------- */
+h3 {
+  margin-top: 45px;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #0b6e4f;
+  position: relative;
+}
+h3::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  margin: 10px auto 0;
+  border-radius: 2px;
+  background: #f4a300;
+}
+
+/* ---------- Destination cards ---------- */
+dl { margin-bottom: 30px; }
+
+dt {
+  display: flex;
+  align-items: flex-end;
+  height: 440px;
+  margin-top: 25px;
+  padding: 15px 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 14px 14px 0 0;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* each destination's own image */
+dt:nth-of-type(1) {
+  background-image: linear-gradient(transparent 40%, rgba(0,0,0,.65)), url("sigiriya.jfif");
+  background-size: fill;
+  background-repeat: no-repeat;
+}
+dt:nth-of-type(2) {
+  background-image: linear-gradient(transparent 40%, rgba(0,0,0,.65)), url("kandy.jfif");
+  background-size: fill;
+  background-repeat: no-repeat;
+}
+dt:nth-of-type(3) {
+  background-image: linear-gradient(transparent 40%, rgba(0,0,0,.65)), url("nuwaraeliya.jfif");
+  background-size: fill;
+  background-repeat: no-repeat;
+}
+dt:nth-of-type(4) {
+  background-image: linear-gradient(transparent 40%, rgba(0,0,0,.65)), url("galle.jfif");
+  background-size: fill;
+  background-repeat: no-repeat;
+}
+
+dd {
+  margin: 0;
+  padding: 14px 20px;
+  background: #fff;
+  border-radius: 0 0 14px 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  font-size: 25px;
+  font-weight: 550;
+  color: #555;
+}
+
+/* ---------- Footer link ---------- */
+body > b, body > a { display: inline; }
+
+body > b {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+}
+
+body > a {
+  display: block;
+  width: fit-content;
+  margin: 12px auto 50px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: #0b6e4f;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+body > a:hover {
+  background: #f4a300;
+  color: #222;
+  transform: translateY(-2px);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  h1 { padding: 90px 15px; }
+  dt { height: 170px; font-size: 1.3rem; }
+}
